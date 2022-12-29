@@ -1,4 +1,18 @@
-#ifndef WRONG_H
-#define WRONG_H
+#define MAINWINDOW_H
 
-#endif // WRONG_H
+#include <QDialog>
+#include <QPushButton>
+#include <QLabel>
+#include <QString>
+class Wrong : public QDialog
+{
+    Q_OBJECT
+
+private:
+    QPushButton* confirm;
+    QLabel* message;
+
+public:
+    Wrong(QString str,QWidget *parent = 0);
+    ~Wrong();
+};

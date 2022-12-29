@@ -3,16 +3,19 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QComboBox>
-#include "libdata.cpp"
+
+class SearchWindow;
 class AdminWindow : public QMainWindow
 {
     Q_OBJECT
 private:
-    QPushButton *Manadmin;
     QPushButton *Bookadmin;
     QPushButton *Endsystem;
     QPushButton *confirm1;
     QComboBox *Manadminchoose;
+    SearchWindow* S;
+private slots:
+    void aopen();
 public:
     AdminWindow(QWidget *parent = 0);
     ~AdminWindow();

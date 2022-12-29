@@ -17,14 +17,26 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     adminmain.cpp \
-    libdata.cpp \
+    book.cpp \
+    changebook.cpp \
+    editbook.cpp \
     login.cpp \
     main.cpp \
-    usermain.cpp
+    registermain.cpp \
+    searchbooks.cpp \
+    tool.cpp \
+    usermain.cpp \
+    wrong.cpp
 
 HEADERS += \
     adminmain.h \
+    book.h \
+    changebook.h \
+    editbook.h \
     login.h \
+    registermain.h \
+    searchbooks.h \
+    tool.h \
     usermain.h \
     wrong.h
 

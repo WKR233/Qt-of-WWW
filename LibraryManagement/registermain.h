@@ -8,14 +8,12 @@
 #include <QPushButton>
 #include <QString>
 #include <QFile>
+#include <QMessageBox>
+#include <QTextStream>
 #include "tool.h"
-#include <QMap>
-
 using namespace std;
-class AdminWindow;
-class UserWindow;
-class Wrong;
-class LoginWindow : public QMainWindow
+
+class RegisterWindow : public QMainWindow
 {
     Q_OBJECT
 
@@ -26,25 +24,18 @@ private:
     QLineEdit *account;
     QLineEdit *password;
     QLabel *l1;
-    QMap<QString,QString> xzzadmin;
-    QMap<QString,QString> xzzuser;
 
 private slots:
     void getaccount();
     void getpassword();
     void gettype(const QString &s);
-    void next();
     void open();
+    void saveRegister();
 
 public:
-    AdminWindow* A;
-    UserWindow* U;
-    Wrong* W;
-    QPushButton *confirm;
     QPushButton *qregister;
     QString type="Admin";
     bool right=false;
-    LoginWindow(AdminWindow* a,UserWindow* u,QWidget *parent = 0);
-    ~LoginWindow();
-
+    RegisterWindow(QWidget *parent = 0);
+    ~RegisterWindow();
 };
